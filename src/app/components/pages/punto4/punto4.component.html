@@ -1,0 +1,15 @@
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-4 offset-lg-4">
+            <div class="card" >
+                <div class="card-body">
+                  <h5 class="card-title">CONVIERTE TEXTO A AUDIO</h5><br>
+                  <textarea [(ngModel)]="text" name="text" class="textarea" cols="25" rows="3" placeholder="Inserte texto a traducir aqui."></textarea><br><br>
+                  <label><strong>La url del audio es:  </strong></label><a href={{resultado}} target="_blank" class="card-link">Link</a><br><br>
+                  <audio src={{resultado}} controls></audio><br><br>
+                  <button (click)="convert()" class="btn btn-warning btnConvertir">CONVERTIR</button>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

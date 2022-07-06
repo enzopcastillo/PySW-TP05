@@ -1,0 +1,43 @@
+<div class="container cont-c mt-5 mb-5">
+    <div class="row">
+      <div class="col-8 offset-lg-2">
+          <form>
+            <div class="row">
+                <div class="col-12">
+                  <label for="exampleFormControlSelect1">De:</label>
+                  <select [(ngModel)]="source" name="source" class="form-control" id="exampleFormControlSelect1">
+                    <option [value]="item.value" *ngFor="let item of selectDe">{{item.nombre}}</option>
+                  </select>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-12">
+                  <textarea [(ngModel)]="text" name="text" class="textarea" cols="30" rows="3" placeholder="Inserte texto a traducir aqui."></textarea>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-12">
+                  <label for="exampleFormControlSelect1">A:</label>
+                    <select [(ngModel)]="target" name="target"  class="form-control" id="exampleFormControlSelect1">
+                      <option [value]="item.value" *ngFor="let item of selectA">{{item.nombre}}</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-12">
+                  <textarea class="textarea" cols="30" rows="3" placeholder="La traduccion se vera aqui." disabled>{{translatedText}}</textarea>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-12">
+                  <button class="btn btn-danger buttonTraducir" (click)="traducir()">TRADUCIR</button>
+                </div>
+            </div>
+          </form>
+      </div>
+    </div>
+  </div>

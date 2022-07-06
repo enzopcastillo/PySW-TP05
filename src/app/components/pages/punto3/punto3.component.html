@@ -1,0 +1,51 @@
+<div class="container mt-5 mb-5">
+    <div class="row">
+      <div class="col-md-8 d-none d-sm-block">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col"><img src="assets/images/divisas1.jpg" class="divisas1" alt=""> ARS</th>
+              <th scope="col"><img src="assets/images/divisas2.jpg" class="divisas1" alt=""> USD</th>
+              <th scope="col"><img src="assets/images/divisas3.jpg" class="divisas1" alt=""> EU</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><img src="assets/images/divisas2.jpg" class="divisas1" alt=""> USD</th>
+              <td>{{cotizacionARS}}</td>
+              <td><b>1</b></td>
+              <td>{{cotizacionEUR}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-4 cold-sm-12">
+        <form>
+          <div class="form-group">
+            <label for="cantidad">Cantidad</label>
+            <input [(ngModel)]="fromValue" name="fromValue" type="number" class="form-control" id="cantidad" placeholder="Cantidad">
+          </div>
+          <div class="form-group">
+            <label for="de">De:</label>
+            <select [(ngModel)]="fromType" name="fromType" class="form-control" id="de">
+              <option *ngFor="let item of selectDe" [value]="item.value">{{item.nombre}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="a">A:</label>
+            <select [(ngModel)]="toType" name="toType" class="form-control" id="a">
+              <option *ngFor="let item of selectA" [value]="item.value">{{item.nombre}}</option>
+            </select>
+          </div>
+          <br>
+          <button (click)="obtenerCotizacion()" type="submit" class="btn btn-danger buttonConvertir">CONVERTIR</button>
+          <br>
+          <div class="form-group">
+            <label for="resultado">Resultado</label>
+            <textarea disabled class="form-control" id="resultado" rows="1">{{resultado}}</textarea>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

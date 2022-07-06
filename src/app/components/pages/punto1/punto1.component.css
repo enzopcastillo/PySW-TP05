@@ -1,0 +1,32 @@
+.cont-c{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 500px;
+    width: 400px;
+}
+
+.button1{
+    width: 30px;
+    height: 20px;
+}
+
+.buttonTraducir{
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #04AA6D;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.textarea{
+    width: 100%;
+}
+
+.select{
+    width: 100%;
+}

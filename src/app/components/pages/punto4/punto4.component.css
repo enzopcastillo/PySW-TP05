@@ -1,0 +1,15 @@
+.btnConvertir{
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.textarea{
+    width: 100%;
+}
